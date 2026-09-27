@@ -1,0 +1,104 @@
+{
+  "slug": "upsclear",
+  "box": 9,
+  "date": "2026-10-02",
+  "title": "UPSClear",
+  "question": "How does an inverter or UPS work?",
+  "hook": "When the power cuts out and the fans keep turning, a box in the corner is quietly turning a battery's DC back into 230 V AC. Take a home inverter and a computer UPS apart in 3D, and watch the switch happen in milliseconds.",
+  "thumbText": "HOW AN INVERTER WORKS",
+  "field": "physics",
+  "minutes": 15,
+  "tags": [
+    "inverter",
+    "UPS",
+    "power cut",
+    "battery",
+    "lead-acid",
+    "AC and DC",
+    "electronics",
+    "three.js"
+  ],
+  "explainer": [
+    {
+      "title": "Store it now, give it back later",
+      "text": "A home inverter is a battery, a charger and an inverter in one box. While the mains is on it fills a 12 V battery; in a power cut it turns that battery's energy back into 230 V AC for your fans and lights. A computer UPS is the same idea, shrunk down."
+    },
+    {
+      "title": "AC into DC: four diodes and a capacitor",
+      "text": "Mains in India swings between +325 V and −325 V fifty times a second. A transformer steps it down, a bridge of four diodes flips the backwards half of each wave, and a capacitor smooths the bumps. The charger then fills the battery in stages: bulk, about 14.4 V absorption, then about 13.5 V float."
+    },
+    {
+      "title": "DC into AC: four switches and a transformer",
+      "text": "Four MOSFET switches in an H-bridge connect the battery one way round, then the other, 50 times a second. Pure sine inverters switch thousands of times a second in pulses of changing width and filter them smooth. A transformer with about 19 times more turns lifts 12 V to 230 V, and the current drops by the same factor."
+    },
+    {
+      "title": "Switching over in milliseconds",
+      "text": "An offline UPS lets mains straight through and clicks a relay over to its inverter when the mains fails, in about 5 to 15 ms. A PC survives the gap on the capacitor inside its power supply. An online UPS runs from its inverter all the time, so there is no gap at all."
+    },
+    {
+      "title": "How long the backup lasts",
+      "text": "12 V × 150 Ah is 1,800 Wh, but only about 80% is usable, the inverter loses about 15%, and draining a battery fast gives less capacity (Peukert's law). Two ordinary fans, four LED bulbs, a TV and a router run for about three and a half hours; with BLDC fans, nearly six."
+    },
+    {
+      "title": "Inside the battery",
+      "text": "Six lead-acid cells of about 2.1 V make 12.6 V. Discharging turns both plates into lead sulfate and weakens the acid, so a hydrometer reading shows the charge. Charging splits a little water, so it needs distilled water topped up. LiFePO₄ batteries use four 3.2 V cells, weigh about a third as much and last thousands of cycles."
+    }
+  ],
+  "concepts": [
+    {
+      "term": "AC and DC",
+      "def": "Alternating current keeps reversing, 50 times a second in India; direct current flows one way, like a battery's."
+    },
+    {
+      "term": "Rectifier",
+      "def": "A circuit, usually four diodes in a bridge, that turns AC into current flowing one way."
+    },
+    {
+      "term": "Inverter",
+      "def": "A circuit that turns DC into AC by switching a battery's connection back and forth."
+    },
+    {
+      "term": "H-bridge",
+      "def": "Four switches that can connect a load either way round to a battery."
+    },
+    {
+      "term": "PWM",
+      "def": "Pulse-width modulation: fast on-off pulses whose changing widths average out to a smooth wave."
+    },
+    {
+      "term": "Transformer",
+      "def": "Two coils on an iron core that step AC voltage up or down; the current changes the other way."
+    },
+    {
+      "term": "Transfer time",
+      "def": "The gap between the mains failing and the backup taking over: about 10 ms for an offline UPS, zero for an online one."
+    },
+    {
+      "term": "Amp-hour",
+      "def": "How much charge a battery holds. Volts × amp-hours gives the energy in watt-hours."
+    },
+    {
+      "term": "Specific gravity",
+      "def": "The density of a lead-acid battery's acid compared with water: about 1.26 when full, 1.12 when flat."
+    }
+  ],
+  "links": {},
+  "storage": [
+    {
+      "key": "upsclear.v1",
+      "what": "Which chapters you have opened, your best quiz scores, and sound on or off."
+    }
+  ],
+  "credits": [
+    {
+      "name": "three.js",
+      "license": "MIT",
+      "url": "https://threejs.org"
+    },
+    {
+      "name": "Geist, Instrument Serif",
+      "license": "SIL OFL 1.1",
+      "url": "https://openfontlicense.org"
+    }
+  ]
+}
